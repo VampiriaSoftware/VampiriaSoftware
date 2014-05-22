@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head prefix="og: http://ogp.me/ns#">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Vampiria Software</title>
+        <meta name="description" content="Vampiria Software es una empresa mexicana que nace a principios del mes de Abril del año 2013 con la finalidad de brindar soluciones empresariales de la mejor calidad." >
+        <meta name="keywords" content="Vampiria Software,software,aplicaciones web,php,javascript,css,mysql,base de datos,blog,joomla,wordpress,c++,c#,python,ruby,ruby on rails,diseño web,maquetación web,django,jquery,ajax,android,uml,analisis,diseño,objetos,programación,asp,visual basic,.net,servicios web,carrito de compras,soluciones empresariales,sistemas a la medida,html5,juegos,cursos,ios,aplicaciones moviles" >
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:url" content="http://www.vampiriasoftware.tk/" > 
+        <meta property="og:site_name" content="Vampiria Software" > 
+        <meta property="og:title" content="Vampiria Software" > 
+        <meta property="og:description" content="Vampiria Software es una empresa mexicana que nace a principios del mes de Abril del año 2013 con la finalidad de brindar soluciones empresariales de la mejor calidad." >
+        <meta property="og:image" content="http://vampiriasoftware.tk/public/images/img_fb.jpg" >
+        <link rel="shortcut icon" href="<?= BASEURL; ?>public/images/favicon.ico" />
+
+        <link rel="stylesheet" href="<?= BASEURL ?>public/css/normalize.css">
+        <link rel="stylesheet" href="<?= BASEURL ?>public/css/default.css">
+        <script src="<?= BASEURL ?>public/js/lib/modernizr-2.6.2.min.js"></script>
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <?php require_once BASEPATH . 'application/layout/controller/header.php'; ?>
+        <div class="container-fluid contenido">
+            <ol class="breadcrumb">
+                <li><a href="<?= BASEURL ?>"><span class="fa fa-home"></span></a></li>
+                <li class="active"><?= CONTACTO ?></li>
+            </ol>
+            <section class="col-xs-12 col-md-12">
+                <div id="msj"><?= $msj; ?></div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-7">
+                        <h2><?= CONTACTO ?></h2>
+                        <?= INFO_CONTACTO ?>
+                        <form action="" method="post">
+                            <label for="nombre"><?= NOMBRE ?></label>
+                            <input type="text" name="nombre" id="nombre" class="form-control">
+                            <label for="email"><?= EMAIL ?></label>
+                            <input type="email" name="email" id="email" class="form-control">
+                            <label for="asunto"><?= ASUNTO ?></label>
+                            <input type="text" name="asunto" id="asunto" class="form-control">
+                            <label for="mensaje"><?= MENSAJE ?></label>
+                            <textarea name="mensaje" id="mensaje" class="form-control" cols="30" rows="10"></textarea><br><br>
+                            <input type="submit" name="enviar" id="enviar" value="<?= ENVIAR ?>" class="btn btn-success">
+                        </form>    
+                    </div>
+                    <div class="col-xs-12 col-md-5">
+                        <h3><?= DIRECCION_CONTACTO ?></h3>
+                        <address>
+                            <header><strong>Vampiria Software</strong></header><br>
+                            Pachuca Hgo. M&eacute;xico <br>
+                            Mimosa 513 Frac. El Saucillo <br>
+                            <abbr title="<?= TELEFONO ?>"><?= TEL ?>:</abbr> +045 (749) 103 89 43 <br>
+                            <?= EMAIL ?>: <a href="mailto:info@vampiriasoftware.tk">info@vampiriasoftware.tk</a><br>
+                        </address>
+                        <h3>Google Map</h3>
+                        <div id="mapa">
+                            <iframe src="https://mapsengine.google.com/map/embed?mid=zf3PoXcrerLA.kpwc_VKosQzo" width="640" height="480"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <?php require_once BASEPATH . 'application/layout/controller/footer.php'; ?>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="<?= BASEURL ?>public/js/lib/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="<?= BASEURL ?>public/js/lib/bootstrap.min.js"></script>
+        <script src="<?= BASEURL ?>public/js/scrollUp.min.js"></script>
+        <script>
+            var url = '<?= BASEURL ?>';
+        </script>
+        <script src="<?= BASEURL ?>public/js/language/<?= $language ?>.js"></script>
+        <script src="<?= BASEURL ?>application/usuarios/js/Usuarios.js"></script>
+        <script src="<?= BASEURL ?>public/js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-44883526-1');ga('send','pageview');
+        </script>
+    </body>
+</html>
