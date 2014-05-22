@@ -9,4 +9,4 @@
 */
 
 define ('BASEPATH',dirname(__FILE__) . '/');
-define ('BASEURL','http://www.vampiriasoftware.tk/');
+define ('BASEURL','http://vampiriasoftware.tk/');
